@@ -262,7 +262,7 @@ public class AccountBookDaoImpl implements AccountBookDao {
 		System.out.println("| 지출: -" + outcome + "원");
 	}
 	
-	@Override   // 기간별 결산
+	@Override   // 전체 결산
 	public void all() {
 		Singleton s = Singleton.getInstance();
 		int income = 0, outcome = 0;
