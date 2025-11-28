@@ -21,7 +21,9 @@ public class Main {
 			System.out.println("| 7. 내역 저장            |");
 			System.out.println("| 8. 전체 내역 출력         |");
 			System.out.println("| 0. 프로그램 종료          |");
-			System.out.println(" -----------------------");
+			System.out.println(" ------- 전체 결산 -------");
+			dao.all();
+			System.out.println(" ----------------------");
 			System.out.print("메뉴 번호 입력: ");
 			int number = sc.nextInt();
 			

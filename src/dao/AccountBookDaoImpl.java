@@ -262,6 +262,22 @@ public class AccountBookDaoImpl implements AccountBookDao {
 		System.out.println("| 지출: -" + outcome + "원");
 	}
 	
+	@Override   // 기간별 결산
+	public void all() {
+		Singleton s = Singleton.getInstance();
+		int income = 0, outcome = 0;
+		for (AccountBookDto dto: s.list) {
+			if (dto.getInOutCome().equals("+")) {
+				income += dto.getMoney();
+			}
+			else if (dto.getInOutCome().equals("-")) {
+				outcome += dto.getMoney();
+			}
+		}
+		System.out.println("| 수입: +" + income + "원");
+		System.out.println("| 지출: -" + outcome + "원");
+	}
+	
 	// ====================================================================================
 
 	@Override   // 파일에 내역 저장

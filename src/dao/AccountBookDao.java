@@ -11,6 +11,7 @@ public interface AccountBookDao {
 	
 	void monthly();
 	void period();
+	void all();
 	
 	void save();
 	void load();
