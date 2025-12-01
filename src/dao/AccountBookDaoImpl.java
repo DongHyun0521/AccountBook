@@ -271,11 +271,12 @@ public class AccountBookDaoImpl implements AccountBookDao {
 				income += dto.getMoney();
 			}
 			else if (dto.getInOutCome().equals("-")) {
-				outcome += dto.getMoney();
+				outcome -= dto.getMoney();
 			}
 		}
-		System.out.println("| 수입: +" + income + "원");
-		System.out.println("| 지출: -" + outcome + "원");
+		System.out.println("| 수입: " + income + "원");
+		System.out.println("| 지출: " + outcome + "원");
+		System.out.println("| 잔액: " + (income + outcome) + "원");
 	}
 	
 	// ====================================================================================
